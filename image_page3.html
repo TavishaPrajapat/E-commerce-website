@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- Document type declaration for an HTML5 document -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <!-- Set the character encoding for the document to UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Specify compatibility mode for Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configure the viewport settings for responsive design -->
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="images/radio.png">
+        <!-- Set the title of the web page -->
+    <link rel="stylesheet" href="style.css">
+ <!-- Link to an external CSS file for styling -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body class="main-body">
+  <!-- Start of the main body of the web page with a class "main-body" -->
+  <header>
+ <!-- Header section of the web page -->
+  <p class="heading">Free shipping Across Canada for orders over $80</p>
+  <!-- Paragraph with a class "heading" containing a shipping information message -->
+  <h1 class="head">Official Carvaan Distributor in Canada </h1>
+ <!-- Heading level 1 with a class "head" describing the distributor -->
+  <div id="menu" class="fas fa-bars"></div>
+ <!-- A div element with an ID "menu" and classes for font-awesome icons, representing a menu icon -->
+  <nav class="navbar">
+      <!-- Navigation section with a class "navbar" -->
+      <ul>
+        <!-- Unordered list for navigation links -->
+           <li><a href="index.html">home</a></li>
+            <!-- List item with a link to "index.html" representing the Home page -->
+            <li><a href="contact.html">contact</a></li>
+            <!-- List item with a link to "contact.html" representing the Contact page -->
+            <li><a href="feedback.html">Feedback</a></li>
+            <!-- List item with a link to "feedback.html" representing the Feedback page -->
+            <li><a href="about-us.html">About us</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<div class = "main-wrapper">
+  <div class = "container">
+      <div class = "product-div">
+          <div class = "product-div-left">
+              <div class = "img-container">
+                  <img src = "https://s.saregama.com/image/s/fh_300/8/1b/cb/carvaanframe_10_1592664002.png" alt = "watch">
+              </div>
+          </div>
+          <div class = "product-div-right">
+              <span class = "product-name">Emrald Green</span>
+              <span class = "product-price">$999</span>
+              <div class = "product-rating">
+                  <span><i class = "fas fa-star"></i></span>
+                  <span><i class = "fas fa-star"></i></span>
+                  <span><i class = "fas fa-star"></i></span>
+                  <span><i class = "fas fa-star"></i></span>
+                  <span><i class = "fas fa-star-half-alt"></i></span>
+                  <span>(350 ratings)</span>
+              </div>
+              <p class = "product-description">Retro is back with Saregama Carvaan. This portable digital music player with in-built stereo speakers comes pre-loaded with 5000 evergreen Hindi songs. With the option to tune into FM, Carvaan doubles up as your home radio too. You can also enjoy your personal collection of songs by plugging in a USB drive or streaming songs from your phone to the Carvaan via Bluetooth. It works on a rechargeable battery that lasts up to 5 hours. The product is backed by an all India service network, providing 12 months in-home warranty support.</p>
+              <div class = "btn-groups">
+                  <button type = "button" class = "add-cart-btn"><i class = "fas fa-shopping-cart"></i>add to cart</button>
+                  <button type = "button" class = "buy-now-btn"><i class = "fas fa-wallet"></i>buy now</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <div class="footer">
+ <!-- Footer section of the web page with a class "footer" -->
+    <div class="box-container">
+  <!-- Div containing a box container for footer content -->
+  <div class="box">
+    <!-- Div representing a box within the footer -->
+    <h3>why choose us?</h3>
+    <!-- Heading level 3 indicating content about why to choose the distributor -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, illum voluptatum. Unde, consequuntur at. Molestias culpa suscipit explicabo possimus iusto?</p>
+    <!-- Paragraph describing the benefits of choosing the distributor -->
+</div>
+<div class="box">
+  <!-- Another div representing a box within the footer -->
+  <h3>quick links</h3>
+  <!-- Heading level 3 indicating quick links section -->
+  <a href="index.html">home</a>
+  <!-- Link to the Home page -->
+  <a href="feedback.html">Feedback</a>
+  <!-- Link to the Feedback page -->
+  <a href="contact.html">contact</a>
+  <!-- Link to the Contact page -->
+  <a href="about-us.html">About us</a>
+</div>
+
+<div class="box">
+    <!-- Third div representing a box within the footer -->
+    <h3>newsletter</h3>
+    <!-- Heading level 3 indicating newsletter section -->
+    <p>subscribe us for latest updates</p>
+    <!-- Paragraph inviting users to subscribe to the newsletter -->
+    <form action="">
+        <!-- Form for newsletter subscription -->
+        <input type="email" placeholder="your email">
+        <!-- Input field for email address -->
+        <input type="submit" class="btn" value="subscribe">
+        <!-- Submit button for subscribing with a class "btn" -->
+    </form>
+</div>
+</div>
+<script>
+  function img(anything) {
+    document.querySelector('.slide').src = anything;
+  }
+
+  function change(change) {
+    const line = document.querySelector('.home');
+    line.style.background = change;
+  }
+</script>
+</body>
+</html>
+<!-- End of the HTML document --> 

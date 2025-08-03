@@ -1,0 +1,2124 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Creepster&family=Dancing+Script:wght@500&family=Nosifer&family=Pacifico&family=Prata&family=Roboto:wght@100&family=Russo+One&display=swap');
+/* Import Google Fonts - Roboto with different weights and styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+/* Define a custom color variable */
+:root {
+    --primary-color: #ff226f; /* Primary color */
+    --primary-color-dark: #fe6769; /* Darker shade of primary color */
+    --text-dark: #333333; /* Dark text color */
+    --white: #ffffff; /* White color */
+  }
+
+/* Global styling */
+/* Set the font family for all elements to 'Open Sans' or a sans-serif fallback */
+*{
+    font-family: 'Open Sans', sans-serif;
+    /* Reset margin and padding to 0 for consistent spacing */
+    margin:0; padding:0;
+    /* Ensure that the box-sizing includes borders and padding in the element's total width and height */
+    box-sizing: border-box;
+    /* Remove text decoration (e.g., underlines) from all elements */
+    text-decoration: none;
+    /* Remove the default outline that appears when elements are clicked or focused */
+    outline:none;
+    /* Remove the default border style from elements */
+    border:none;
+     /* Capitalize the text transform of all elements */
+    text-transform: capitalize;
+     /* Apply a smooth transition effect for property changes with a 0.2s duration */
+    transition: all .2s linear;
+}
+
+/* Style for selected text */
+*::selection{
+    /* Set the background color for selected text using a CSS variable */
+    background:var(--orange);
+    /* Set the text color for selected text to white */
+    color:#5f1313;
+}
+
+/* Set base font size for responsiveness */
+html{
+    /* Set the base font size to 62.5% of the default, which makes it easier to calculate rem units */
+    font-size: 62.5%;
+    /* Hide horizontal overflow, preventing horizontal scrolling */
+    overflow-x: hidden;
+}
+body{
+    background: linear-gradient(to right, #9BBEC8, #E6EEF5);
+}
+
+/* Header styling */
+header{
+    /* Fix the header position on the screen */
+    position: fixed;
+    /* Align the header to the top */
+    top:0;
+    /* Align the header to the left */
+    left: 0;
+    /* Set the stacking order of the header */
+    z-index: 1000;
+    /* Set the background color of the header to white */
+    background:#fff;
+    /* Add a shadow to the header */
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+     /* Set the width of the header to 100% of the viewport */
+    width:100%;
+}
+
+/* Styling for shipping message */
+header .heading{
+     /* Set the font size to 10 pixels */
+    font-size: 10px;
+    /* Apply bold font weight */
+    font-weight: bold;
+    /* Set the text color to a shade of turquoise */
+    color:#164863;
+    /* Add padding around the content */
+    padding:1rem;
+    /* Center-align the text within the element */
+    text-align: center;
+}
+
+/* Styling for main heading */
+header .head{
+    /* Set the font size to 15 pixels */
+    font-size: 15px;
+     /* Apply bold font weight */
+    font-weight: bold;
+    /* Set the text color to white */
+    color:white;
+    /* Set the background color using RGB values */
+    background-color:#438198;
+    /* Add padding around the content */
+    padding:1rem;
+    /* Center-align the text within the element */
+    text-align: center;
+}
+
+/* Styling for mobile menu icon */
+header #menu{
+    /* Set the font size to 3 rem */
+    font-size: 3rem;
+    /* Set the color of the menu icon */
+    color:#164863;
+    /* Change the cursor to a pointer when hovering over the menu icon */
+    cursor: pointer;
+    /* Initially hide the menu icon */
+    display: none;
+}
+
+/* Styling for navigation bar */
+header .navbar ul{
+    /* Use flexbox to arrange list items horizontally */
+    display: flex;
+    /* Align items to the left within the flex container */
+    align-items: left;
+    /* Remove default list bullet points */
+    list-style: none;
+    /* Add padding around the list */
+    padding:1rem; 
+    /* Set the background color of the navigation bar */
+    background-color: #164863;
+}
+
+/* Styling for navigation links in the navbar */
+header .navbar ul li{
+    /* Set margins to space out the navigation links */
+    margin:0 1.5rem;
+}
+
+/* Styling for navigation links in the navbar */
+header .navbar ul li a{
+    /* Set the font size for the navigation links */
+    font-size: 2rem;
+    /* Set the color of the navigation link text to white */
+    color:#fff;
+}
+
+/* Styling for navigation links on hover */
+header .navbar ul li a:hover{
+    /* Set the color of the navigation link text when hovered */
+    color:#444;
+}
+
+/* Styling for the carousel */
+.carousel {
+    /* Set the height of the carousel */
+    height:700px;
+    margin-top: 13rem; /* Adjust the margin-top to create space under the navbar */
+    width:auto; /* Adjust the width of the carousel */
+}
+
+/* Styling for radio buttons */
+.radio{
+    /* Center-align the content within the element */
+    text-align:center;
+}
+
+/* Styling for h1 within the radio section */
+.radio h1{
+    /* Set the font size for the heading */
+    font-size: 40px;
+    /* Apply a custom font family */
+    font-family: 'Caprasimo', cursive;
+}
+
+/* Styling for paragraphs within the radio section */
+.radio p{
+    /* Set the font size for the paragraphs */
+    font-size:20px;
+    /* Apply a custom font family */
+    font-family: 'Pacifico', cursive;
+}
+
+/* Styling for the slides container */
+ul.slides {
+    /* Set the display property to block */
+    display: block;
+    /* Set the position to relative */
+    position: relative;
+    /* Set the height of the slides container */
+    height: 600px;
+    /* Remove margin */
+    margin: 0;
+    /* Remove padding */
+    padding: 0;
+    /* Hide overflow content */
+    overflow: hidden;
+    /* Remove default list bullet points */
+    list-style: none;
+}
+
+/* Styling to prevent user selection on slide elements */
+.slides * {
+    /* Prevent text selection */
+    user-select: none;
+    /* For Microsoft browsers */
+    -ms-user-select: none;
+    /* For Mozilla Firefox */
+    -moz-user-select: none;
+    /* For KHTML browsers */
+    -khtml-user-select: none;
+    /* For WebKit-based browsers */
+    -webkit-user-select: none;
+    /* Disable touch callout on WebKit */
+    -webkit-touch-callout: none;
+}
+
+/* Styling to hide input elements within slide container */
+ul.slides input {
+    /* Hide the input elements */
+    display: none; 
+}
+
+/* Styling for the slide container */
+.slide-container { 
+    /* Set the display property to block */
+    display: block; 
+}
+
+/* Styling for slide images within the carousel */
+.slide-image {
+    /* Set the display property to block */
+    display: block;
+    /* Set the position to absolute */
+    position: absolute;
+    /* Set the width to 100% */
+    width: 100%;
+    /* Set the height to 100% */
+    height: 100%;
+    /* Align to the top of the container */
+    top: 0;
+    /* Initially set the opacity to 0 (hidden) */
+    opacity: 0;
+    /* Apply a transition effect */
+    transition: all .7s ease-in-out;
+}   
+
+/* Styling for images within slide images */
+.slide-image img {
+    /* Set the width to 100% */
+    width: 100%;
+    /* Set the minimum width to 100% */
+    min-width: 100%;
+    /* Set the height to 100% */
+    height: 100%;
+}
+
+
+/* Styling for carousel controls */
+.carousel-controls {
+    /* Set the position to absolute */
+    position: absolute;
+    /* Align to the top */
+    top: 0;
+    /* Align to the left */
+    left: 0;
+    /* Align to the right */
+    right: 0;
+    /* Set the stacking order */
+    z-index: 999;
+    /* Set the font size */
+    font-size: 100px;
+    /* Set the line height to center vertically */
+    line-height: 600px;
+    /* Set the color to white */
+    color: #fff;
+}
+
+/* Hide the labels of carousel controls */
+.carousel-controls label {
+    /* Hide the label element */
+    display: none;
+    /* Position the label absolutely within its container */
+    position: absolute;
+    /* Add padding to the label for spacing */
+    padding: 0 20px;
+    /* Set the initial opacity to fully transparent */
+    opacity: 0;
+    /* Apply a smooth transition effect to opacity changes */
+    transition: opacity .2s;
+    /* Change the cursor to a pointer when hovering over the label */
+    cursor: pointer;
+}
+
+/* Apply styles to the carousel controls label when the associated slide image is hovered */
+.slide-image:hover + .carousel-controls label{
+    /* Change the opacity of the label to 0.5 on hover */
+    opacity: 0.5;
+}
+
+/* Apply styles to the carousel controls label when it is hovered */
+.carousel-controls label:hover {
+    /* Change the opacity of the label to 1 on hover, making it fully visible */
+    opacity: 1;
+}
+
+/* Styles for the previous slide control within the carousel controls */
+.carousel-controls .prev-slide {
+    /* Set the width of the previous slide control to 49% */
+    width: 49%;
+    /* Align the content inside the control to the left */
+    text-align: left;
+    /* Position the control on the left side within its container */
+    left: 0;
+}
+
+/* Styles for the next slide control within the carousel controls */
+.carousel-controls .next-slide {
+    /* Set the width of the next slide control to 49% */
+    width: 49%;
+    /* Align the content inside the control to the right */
+    text-align: right;
+    /* Position the control on the right side within its container */
+    right: 0;
+}
+
+/* Adjusted styling for the carousel-dots to center them */
+.carousel-dots {
+    /* Position the dots container absolutely within its parent */
+    position: absolute;
+    /* Move the container horizontally to the center */
+    left: 50%;
+    /* Center the container using a negative translateX */
+    transform: translateX(-50%);
+    /* Position the container 20px from the bottom */
+    bottom: 20px;
+    /* Set a high z-index to make sure the dots appear above other elements */
+    z-index: 999;
+    /* Center-align the dots within their container */
+    text-align: center;
+}
+
+/* Styling for individual carousel dots */
+.carousel-dots .carousel-dot {
+    /* Display the dots inline within the container */
+    display: inline-block;
+    /* Set the width of each dot */
+    width: 30px;
+    /* Set the height of each dot */
+    height: 30px;
+    /* Create a circular shape for the dot */
+    border-radius: 50%;
+    /* Set the background color of the dot */
+    background-color: #fff;
+    /* Set the initial opacity of the dots to 0.5 */
+    opacity: 0.5;
+    /* Add margin around each dot for spacing */
+    margin: 10px;
+}
+
+/* Styles for controlling the opacity and transition of slide images */
+input:checked + .slide-container .slide-image {
+    /* Set the opacity of the checked slide image to 1 */
+    opacity: 1;
+    /* Apply a scale transformation to the slide image */
+    transform: scale(1);
+    /* Apply a smooth transition to opacity changes with easing */
+    transition: opacity 1s ease-in-out;
+}
+
+/* Show the carousel controls when the corresponding input is checked */
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+/* Set the opacity of the dots to 1 when the corresponding image input is checked */
+/* Highlight active dots when corresponding input is checked */
+/* Individual dot styles for each image */
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+/* Show navigation labels when corresponding input is checked */
+input:checked + .slide-container .nav label { 
+    display: block;
+ }
+/* Reset some default styles */
+/* Set common styles for all elements to normalize layout */
+* {
+    /* Remove default margin */
+    margin: 0;
+    /* Remove default padding */
+    padding: 0;
+    /* Use border-box box-sizing for consistent sizing */
+    box-sizing: border-box;
+}
+
+
+/* Styling for main headings */
+h1 {
+    padding-top: 5px; /* Add padding to the top */
+    text-align: center; /* Center align text */
+    color: #131212; /* Set text color */
+    text-shadow: 2px 2px 4px rgba(235, 230, 230, 0.795); /* Add text shadow for depth */
+    font-size: 40px; /* Set font size */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Set font family */
+}
+
+/* Styling for subheadings */
+h2 {
+    padding-top: 5px; /* Add padding to the top */
+    text-align: center; /* Center align text */
+    color: #131212; /* Set text color */
+    text-shadow: 2px 2px 4px rgba(235, 230, 230, 0.795); /* Add text shadow for depth */
+    font-size: 20px; /* Set font size */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Set font family */
+}
+
+/* Styling for paragraphs */
+p {
+    padding-top: 20px; /* Add padding to the top */
+    padding-left: 100px; /* Add padding to the left */
+    padding-right: 100px; /* Add padding to the right */
+    font-size: medium; /* Set font size */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Set font family */
+}
+
+/* Styling for unordered lists */
+ul {
+    text-align: center; /* Center align text */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Set font family */
+}
+
+
+
+/*product*/
+/* Styles for a container holding all products */
+.all-products {
+     /* Use flex display to arrange items horizontally */
+    display: flex;
+    /* Align items along the cross-axis (vertically centered) */
+    align-items: center;
+    /* Align items along the main axis (horizontally centered) */
+    justify-content: center;
+     /* Allow items to wrap to the next line if there's not enough space */
+    flex-wrap: wrap;
+}
+/* Styles for an individual product */
+.product {
+    /* Hide overflowing content within the product */
+    overflow: hidden;
+    /* Set the background color to white */
+    background: #ffffff;
+    /* Set the text color to a dark shade */
+    color: #21201e;
+    /* Center-align the text within the product */
+    text-align: center;
+    /* Set a fixed width for the product */
+    width: 240px;
+    /* Set a fixed height for the product */
+    height: 400px;
+    /* Add padding around the content inside the product */
+    padding: 2rem;
+     /* Use flex display with column direction for content arrangement */
+    display: flex;
+    flex-direction: column;
+    /* Center-align items along the cross-axis */
+    align-items: center;
+    /* Center-align items along the main axis */
+    justify-content: center;
+    /* Apply rounded corners to the product */
+    border-radius: 1.2rem;
+    /* Add margin around the product */
+    margin: 2rem;
+    /* Apply a smooth transition effect for box-shadow changes */
+    transition: box-shadow 0.3s;
+}
+
+/* Styles for the title and price of a product */
+.product .product-title,
+.product .product-price {
+    /* Set the font size for the product title and price */
+    font-size: 18px;
+}
+/* Hover effect for scaling the product image on hover */
+.product:hover img {
+    /* Apply a scale transformation to the image */
+    transform: scale(1.1);
+}
+/* Hover effect for adding a box-shadow to the product on hover */
+.product:hover {
+    /* Apply a box-shadow on hover */
+    box-shadow: 5px 15px 25px #eeeeee;
+}
+/* Styles for the product image */
+.product img {
+    /* Set the height of the product image */
+    height: 200px;
+    /* Add margin around the product image */
+    margin: 1rem;
+    /* Apply a smooth transition effect for all properties over 0.3s */
+    transition: all 0.3s;
+}
+/* Styles for links within a product in their normal and visited states */
+.product a:link,
+.product a:visited {
+    /* Set the color of the link text */
+    color: #ececec;
+    /* Display the link as an inline block */
+    display: inline-block;
+    /* Remove the default underline for links */
+    text-decoration: none;
+    /* Set the background color for the link */
+    background-color: #164863;
+    /* Add padding around the link content */
+    padding: 1.2rem 3rem;
+    /* Apply rounded corners to the link */
+    border-radius: 1rem;
+    /* Add top margin to the link */
+    margin-top: 1rem;
+    /* Set the font size for the link text */
+    font-size: 14px;
+    /* Apply a smooth transition effect for all properties over 0.2s */
+    transition: all 0.2s;
+}
+/* Hover effect for scaling links within a product on hover */
+.product a:hover {
+    /* Apply a scale transformation to the link on hover */
+    transform: scale(1.1);
+}
+
+/* Create a grid layout with two equal columns and spacing between */
+/* This rule defines a grid layout for the container and specifies column layout, gap, and alignment */
+.grid-container {
+    /* Use grid display for layout */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Gap between columns */
+    align-items: center; /* Center content vertically */
+  }
+  
+/* Ensure responsive image display */
+/* This rule sets maximum width and maintains aspect ratio */
+  .image img {
+    /* Ensure image doesn't exceed its container */
+    max-width: 100%;
+    /* Maintain image's aspect ratio */
+    height: auto;
+  }
+
+  .image {
+    position: relative; /* Add relative positioning */
+    overflow: hidden; /* Hide any overflow from the image */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    transition: transform 0.3s ease-in-out; /* Add transition property */
+}
+
+.image:hover {
+    transform: scale(1.05); /* Add a slight scale effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+}
+  /* Styling for text content */
+/* This rule centralizes text, adds padding, and sets font size */
+  .text {
+    /* Center-align the text */
+    text-align: center;
+    /* Add padding around the text */
+    padding: 20px;
+    /* Set font size to 14 pixels */
+    font-size: 14px;
+  }
+
+  /* Styling for text content */
+/* This rule sets the font family for h1 headings */
+  .text h1{
+    /* Apply 'Caprasimo' font family */
+    font-family: 'Caprasimo', cursive;
+  }
+
+  /* Styling for text content */
+/* This rule sets the font family for paragraphs */
+ .text p{
+    /* Apply 'Dancing Script' font family */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Set font family */
+ }
+
+ /* Additional paragraph styling */
+/* This rule adjusts the font size for paragraphs */
+  .paragraph{
+    /* Set font size to 25 pixels */
+    font-size: 25px;
+  }
+
+/* Styling for paragraphs */
+/* This rule sets the font size and bold weight for paragraphs */
+  .textofparagraph{
+    /* Set font size to 20 pixels */
+    font-size: 20px;
+    /* Apply bold font weight */
+    font-weight: bold;
+    
+  }
+
+  /* Styling for buy now buttons */
+/* This rule sets padding, background color, text color, border, border radius, cursor, font size, and text decoration for the button */
+.buy-now-button {
+    display: inline-block; /* Make the button inline */
+    margin-top: 15px; /* Add space above the button */
+    background-color: #0d948b; /* Use a slightly different color for the button */
+    color: #fff; /* Set text color to white */
+    padding: 12px 24px; /* Add more padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Apply rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+/* Styles for a grid container */
+  .grid-container {
+    /* Use grid display for the container */
+    display: grid;
+    /* Define grid columns using the repeat function, auto-filling with a minimum size of 250px and a maximum size of 1fr (fraction of available space) */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Set the gap (spacing) between grid items */
+    gap: 20px;
+    /* Add padding around the grid container */
+    padding: 20px;
+}
+
+/* Grid styles */
+/* This rule creates a responsive grid layout with dynamic column sizing, spacing, and padding */
+.grid-container {
+    /* Use grid display for layout */
+    display: grid;
+    /* Dynamic columns with minimum width of 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Set gap between grid items */
+    gap: 20px;
+    /* Add padding around the grid container */
+    padding: 20px;
+}
+
+/* Add a transition effect to the grid container */
+.grid-container {
+    transition: transform 0.3s ease-in-out; /* Add transition property */
+  }
+  
+/* Style the footer with a specific background color */
+.footer{
+    background:#438198;
+}
+
+/* Create a flex container for the boxes within the footer */
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    /* Allow boxes to wrap to the next line */
+    flex-wrap: wrap;
+}
+
+/* Style the individual boxes within the footer */
+.footer .box-container .box{
+    /* Add margin around each box */
+    margin:2rem;
+    /* Allow boxes to flex-grow and flex-shrink */
+    flex:1 1 30rem;
+}
+
+/* Style the heading within the boxes */
+.footer .box-container .box h3{
+    /* Set font size for the heading */
+    font-size: 2.5rem;
+    /* Set text color to white */
+    color:#fff;
+}
+
+/* Style paragraphs within the boxes */
+.footer .box-container .box p{
+    /* Set font size for paragraphs */
+    font-size: 1.4rem;
+    /* Set text color to light gray */
+    color:#eee;
+    /* Add padding above and below the paragraphs */
+    padding:1rem 0;
+}
+
+/* Style links within the boxes */
+.footer .box-container .box a{
+    /* Set font size for links */
+    font-size: 1.8rem;
+    /* Set text color to light gray */
+    color:#eee;
+    /* Add padding above and below the links */
+    padding:.4rem 0;
+    /* Make links block-level for better spacing */
+    display: block;
+}
+
+/* Apply underline text decoration on links within boxes when hovered */
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+/* Center align contents of the second box within the footer */
+.footer .box-container .box:nth-child(2){
+    text-align: center;
+}
+
+/* Style the form within the footer's box container */
+.footer .box-container form{
+    /* Display form elements in a row */
+    display: flex;
+    /* Vertically align form elements */
+    align-items: center;
+}
+
+/* Style the email input field within the footer form */
+.footer .box-container form input[type="email"]{
+    /* Set height of the input field */
+    height:4.1rem;
+    /* Occupy full width of its container */
+    width:100%;
+    /* Set font size for the input text */
+    font-size: 1.7rem;
+    /* Add horizontal padding to the input */
+    padding:0 1rem;
+}
+
+/* Adjust the margin of the button within the footer form */
+.footer .box-container form .btn{
+    /* Remove top margin from the button */
+    margin-top: 0;
+}
+
+/* Apply color and background changes on button hover within the footer form */
+.footer .box-container form .btn:hover{
+    /* Change text color on hover */
+    color:#333;
+    /* Change background color on hover */
+    background:#ccc;
+}
+
+/* Style the credit section within the footer */
+.footer .credit{
+    /* Set font size for the credit text */
+    font-size: 2rem;
+    /* Set background color */
+    background:#405c72;
+    /* Center-align the content */
+    text-align: center;
+    /* Set text color to white */
+    color:#fff;
+    /* Add padding to top and bottom, slight padding on sides */
+    padding:2rem 1rem;
+    /* Set normal font weight */
+    font-weight: normal;
+}
+
+/* Style links within the credit section */
+.footer .credit a{
+    /* Set text color for links using a CSS variable */
+    color:var(--orange);
+}
+
+
+/* Apply styles when the screen width is 500px or less */
+@media (max-width:500px){
+    /* Reduce the base font size to 50% for better mobile readability */
+    html{
+        font-size: 50%;
+    }
+
+    /* Style for the header element when the screen is narrower */
+    header{
+        /* Display header content in a row */
+        display: flex;
+        /* Vertically align header content */
+        align-items: center;
+        /* Distribute content to both ends */
+        justify-content: space-between;
+        /* Add padding on the sides */
+        padding:0 1rem;
+    }
+
+    /* Style for the menu icon when the screen is narrower */
+    header #menu{
+        /* Display the menu icon */
+        display: block;
+    }
+
+    /* Style for the navigation bar when the screen is narrower */
+    header .navbar{
+        /* Fix the navbar in place */
+        position: fixed;
+        /* Distance from the top of the screen */
+        top:6.2rem;
+        /* Move the navbar out of the screen to hide it */
+        right:-120%;
+        /* Make the navbar occupy the full screen height */
+        height:100%;
+        /* Make the navbar occupy the full screen width */
+        width:100%;
+        /* Add a top border with opacity */
+        border-top: .2rem solid rgba(0,0,0,.3);
+    }
+
+    /* Styles for the navigation bar in the header */
+    header .navbar ul{
+        /* Set the height to 100% of its container */
+        height:100%;
+        /* Set the width to 100% of its container */
+        width:100%;
+        /* Use flex layout with a column direction */
+        flex-flow: column;
+        /* Set background color to white */
+        background:#fff;
+        /* Add padding at the bottom */
+        padding-bottom: 15rem;
+    }
+
+    /* Styles for each list item in the navigation bar */
+    header .navbar ul li{
+        /* Center-align the text */
+        text-align: center;
+        /* Set the width to 100% of its container */
+        width:100%;
+        /* Add margin above and below */
+        margin:1rem 0;
+    }
+
+    /* Styles for links within list items */
+    header .navbar ul li a{
+        /* Set font size to 4rem */
+        font-size: 4rem;
+        /* Set text color to dark gray */
+        color:#333;
+        /* Display as a block-level element */
+        display: block;
+    }
+
+    /* Styles when hovering over links within list items */
+    header .navbar ul li a:hover{
+        /* Change text color on hover using a custom variable */
+        color:var(--orange);
+    }
+
+    /* Styles for the "fa-times" class, possibly an icon */
+    .fa-times{
+        /* Rotate the icon 180 degrees */
+        transform: rotate(180deg);
+    }
+
+    /* Styles for the navigation bar with the "nav-toggle" class in the header */
+    header .navbar.nav-toggle{
+        /* Align the nav-toggle element to the right */
+        right:0;
+    }
+
+    /* Styles for sections on the page */
+    section{
+        /* Add padding at the top */
+        padding-top: 5rem;
+    }
+
+    /* Styles for the last box within the footer's box container */
+    .footer .box-container .box:last-child{
+        /* Center-align the content within the last box */
+        text-align: center;
+    }
+
+    /* Styles for text within the last box of the footer's box container */
+    .footer .box-container .box:last-child p{
+        /* Set font size to 1.7rem */
+        font-size: 1.7rem;
+    }
+
+    /* Styles for forms within the last box of the footer's box container */
+    .footer .box-container .box:last-child form{
+        /* Use flex layout with a column direction */
+        flex-flow: column;
+    }
+
+    /* Styles for buttons within forms in the last box of the footer's box container */
+    .footer .box-container .box:last-child form .btn{
+        /* Add margin at the top */
+        margin-top: 1rem;
+        /* Set width to 100% of its container */
+        width:100%;
+    }
+
+}
+
+  /* Styles for an element with class "background" */
+  .background {
+    /* Set the background image URL */
+    background-image: url('https://premiosdiamundialdelaradio.com/wp-content/uploads/2018/01/dia-radio.jpeg'); /* Replace with the actual path to your image */
+    /* Scale the background image to cover the entire element */
+    background-size: cover;
+    /* Prevent the background image from repeating */
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+    background-color: rgba(10, 10, 10, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*contact us*/
+/* Styles for the container */
+.con {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+    background: #164863; /* Set background color */
+  }
+  
+  /* Adding a background on the left half of the container */
+  .con::before {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Position the pseudo-element absolutely */
+    top: 0; /* Align to the top of the container */
+    left: 0; /* Align to the left of the container */
+    width: 50%; /* Take up 50% of the container's width */
+    height: 100%; /* Take up 100% of the container's height */
+    background: #9BBEC8; /* Set background color for the pseudo-element */
+  }
+  /* Styles for the contact section */
+.contact{
+    /* Add top margin of 100 pixels */
+    margin-top:100px;
+    /* Set position to relative for child positioning */
+    position:relative;
+    /* Set minimum width of the contact section */
+    min-width:1100px;
+    /* Set minimum height of the contact section */
+    min-height:550px;
+    /* Use flexbox for layout */
+    display:flex;
+}
+/* Styles for the contact information within the contact section */
+.contact .contactInfo{
+     /* Position the contact info absolutely within the contact section */
+    position:absolute;
+    /* Align the contact info 40 pixels from the top */
+    top:40px;
+    /* Set a fixed width for the contact info */
+    width:350px;
+     /* Set the height, accounting for padding and space between elements */
+    height:calc(100% - 90px);
+    /* Set background color for the contact info */
+    background:#164863;
+    /* Set the stacking order, ensuring it appears above other elements */
+    z-index:1;
+    /* Add padding to the contact info */
+    padding:40px;
+     /* Use flexbox for layout within the contact info */
+    display:flex;
+    /* Center content horizontally within the contact info */
+    justify-content:center;
+    /* Arrange child elements in a column layout within the contact info */
+    flex-direction:column;
+    /* Add space between child elements within the contact info */
+    justify-content:space-between;
+    /* Add a box shadow for a subtle visual effect */
+    box-shadow:0 20px 25px rgba(0,0,0,0.15);
+}
+/* Styles for the h2 heading within the contact information */
+.contact .contactInfo h2{
+    /* Set text color to white */
+    color:#fff;
+    /* Set font size to 40 pixels */
+    font-size:40px;
+    /* Set font weight to 500 for semi-bold */
+    font-weight:500;
+}
+/* Styles for the unordered list (.info) within the contact information */
+.contact .contactInfo  ul.info{
+/* Set position to relative for child positioning */
+position:relative;
+/* Add margin (20 pixels) above and below the unordered list */
+margin:20px 0;
+}
+/* Styles for list items within the unordered list */
+.contact .contactInfo  ul.info li{
+    /* Set position to relative for child positioning */
+    position:relative;
+    /* Remove default list styling */
+    list-style:none;
+    /* Use flexbox for layout */
+    display:flex;
+    /* Add margin (20 pixels) above and below each list item */
+    margin:20px 0;
+    /* Change cursor to pointer on hover for interaction */
+    cursor:pointer;
+    /* Align items at the start (top) within the flex container */
+    align-items:flex-start;
+    /* Set font size to 15 pixels */
+    font-size:15px;
+}
+/* Styles for the first span in each list item within ul.info */
+.contact .contactInfo  ul.info li span:nth-child(1){
+    /* Set a fixed width of 30 pixels for the first span */
+    width:30px;
+    /* Set a minimum width of 30 pixels for the first span */
+    min-width:30px;
+}
+/* Styles for the image inside the first span in each list item within ul.info */
+    .contact .contactInfo  ul.info li span:nth-child(1) img{
+     /* Set the maximum width of the image to 100% */    
+    max-width:100%;
+    /* Invert the colors of the image (white to black, black to white) */
+    filter:invert(1);
+    }
+    /* Styles for the second span in each list item within ul.info */
+    .contact .contactInfo  ul.info li span:nth-child(2){
+        /* Set text color to white */
+        color:#fff;
+         /* Add left margin of 10 pixels */
+        margin-left:10px;
+        /* Set font weight to 300 for a lighter font */
+        font-weight:300;
+    }
+    /* Styles for the unordered list (.sci) within the contact information */
+    .contact .contactInfo  ul.sci{
+    /* Set position to relative for child positioning */    
+    position:relative;
+    /* Use flexbox for layout */
+    display:flex;
+}
+/* Styles for list items within the unordered list (.sci) */
+.contact .contactInfo  ul.sci li{
+    /* Remove default list styling */
+    list-style: none;
+    /* Add right margin of 15 pixels between list items */
+    margin-right: 15px;
+
+}
+/* Styles for links within list items of the unordered list (.sci) */
+.contact .contactInfo  ul.sci li a{
+   /* Remove underline from links */  
+ text-decoration:none;
+}
+/* Styles for images within links in list items of the unordered list (.sci) */
+.contact .contactInfo  ul.sci li a img{
+    /* Invert the colors of the image (white to black, black to white) */
+    filter:invert(1);
+}
+/* Styles for the contact form */
+.contact .contactForm
+{
+/* Set position to absolute */    
+position: absolute;
+/* Add padding to the contact form */
+padding: 70px 50px;
+/* Add additional left padding to the contact form */
+padding-left: 250px;
+/* Add left margin of 150 pixels */
+margin-left: 150px;
+/* Calculate the width of the contact form */
+width: calc(100% - 150px);
+/* Set height to 100% */
+height: 100%;
+/* Set background color to white */
+background: #fff;
+/* Add box shadow for a subtle visual effect */
+box-shadow: 0 50px 50px rgba(0,0,0,0.25);
+}
+/* Styles for the h2 heading within the contact form */
+.contact .contactForm h2{
+    /* Set text color to a specific shade of blue */
+    color:#0f3959;
+    /* Set font size to 24 pixels */
+    font-size: 24px;
+    /* Set font weight to 500 for semi-bold */
+    font-weight: 500;
+}
+/* Styles for the formBox container within the contact form */
+.contact .contactForm .formBox{
+    /* Use flexbox for layout */
+    display: flex;
+    /* Set position to relative */
+    position: relative;
+    /* Space items evenly along the main axis */
+    justify-content: space-between;
+     /* Allow items to wrap to the next line if there's not enough space */
+    flex-wrap: wrap;
+    /* Add top padding of 30 pixels */
+    padding-top: 30px;
+}
+/* Styles for individual formBox items within the contact form */
+.contact .contactForm .formBox .inputBox{
+    /* Set position to relative for child positioning */
+    position: relative;
+    /* Add bottom margin of 35 pixels between formBox items */
+    margin-bottom: 35px;
+}
+/* Styles for formBox items that take up 47% of the container's width */
+.contact .contactForm .formBox .inputBox.w50{
+    /* Set width to 47% of the container */
+    width: 47%;
+}
+/* Styles for formBox items that take up 100% of the container's width */
+.contact .contactForm .formBox .inputBox.w100{
+    /* Set width to 100% of the container */
+    width: 100%;
+}
+/* Styles for input and textarea within the inputBox of formBox */
+.contact .contactForm .formBox .inputBox input,
+.contact .contactForm .formBox .inputBox textarea{
+    width: 100%; /* Set width to 100% of the container */
+    resize: none; /* Disable resizing of the textarea */
+    padding: 5px 0; /* Add padding to the top and bottom of the input/textarea */
+    font-size: 18px; /* Set font size to 18 pixels */
+    font-weight: 300; /* Set font weight to 300 for a lighter font */
+    color: #333; /* Set text color to a shade of gray */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline on focus */
+    border-bottom: 1px solid #777; /* Add a bottom border with a specific shade of gray */
+  }
+/* Styles specifically for textarea within the inputBox of formBox */
+.contact .contactForm .formBox .inputBox textarea {
+    height: 120px; /* Set height to 120 pixels for the textarea */
+  }
+  
+  /* Styles for the span within the inputBox of formBox */
+  .contact .contactForm .formBox .inputBox span {
+    position: absolute; /* Set position to absolute */
+    left: 0; /* Align to the left of the container */
+    padding: 5px 0; /* Add padding to the top and bottom of the span */
+    pointer-events: none; /* Ignore pointer events for the span */
+    font-size: 18px; /* Set font size to 18 pixels */
+    font-weight: 300; /* Set font weight to 300 for a lighter font */
+    transition: 0.3s; /* Add a smooth transition effect over 0.3 seconds */
+  }
+
+/* Styles for the span (label) when input is focused or has valid content */
+.contact .contactForm .formBox .inputBox input:focus ~ span,
+.contact .contactForm .formBox .inputBox input:valid ~ span,
+.contact .contactForm .formBox .inputBox textarea:focus ~ span,
+.contact .contactForm .formBox .inputBox textarea:focus ~ span {
+    transform: translateY(-20px); /* Move the label up by 20 pixels */
+    font-size: 12px; /* Set font size to 12 pixels */
+    font-weight: 400; /* Set font weight to 400 */
+    letter-spacing: 1px; /* Add letter spacing */
+    color: #095a55; /* Set text color to a specific shade of green */
+    font-weight: 500; /* Set font weight to 500 */
+}
+
+/* Styles for the submit button within the inputBox of formBox */
+.contact .contactForm .formBox .inputBox input[type="submit"] {
+    position: relative; /* Set position to relative */
+    cursor: pointer; /* Change cursor to pointer on hover for interaction */
+    background: #164863; /* Set background color */
+    color: #fff; /* Set text color to white */
+    border: none; /* Remove border */
+    max-width: 150px; /* Set maximum width to 150 pixels */
+    padding: 12px; /* Add padding */
+}
+/* Styles for the submit button within the inputBox of formBox on hover */
+.contact .contactForm .formBox .inputBox input[type="submit"]:hover {
+    background: #0d948b; /* Change background color on hover */
+}
+
+/* Media query for screens with a maximum width of 1100 pixels */
+@media only screen and (max-width: 1100px) {
+    section {
+        min-height: auto; /* Set minimum height to auto */
+    }
+
+    section::before {
+        width: 100%; /* Set width of pseudo-element to 100% */
+        height: 50%; /* Set height of pseudo-element to 50% */
+    }
+
+    /* Styles for the contact section on smaller screens */
+    .contact {
+        min-width: auto; /* Set minimum width to auto */
+        min-height: auto; /* Set minimum height to auto */
+        flex-direction: column; /* Change flex direction to column */
+    }
+
+    /* Styles for the contactInfo section on smaller screens */
+    .contact .contactInfo {
+        position: static; /* Set position to static */
+        width: 100%; /* Set width to 100% */
+        height: auto; /* Set height to auto */
+        padding: 20px; /* Add padding */
+    }
+
+    /* Styles for the contactForm section on smaller screens */
+    .contact .contactForm {
+        position: static; /* Set position to static */
+        padding: 20px; /* Add padding */
+        margin: 20px 0; /* Add margin */
+        width: 100%; /* Set width to 100% */
+        box-shadow: none; /* Remove box shadow */
+    }
+
+    /* Styles for the formBox within the contactForm on smaller screens */
+    .contact .contactForm .formBox {
+        padding-top: 20px; /* Add top padding */
+    }
+
+    /* Styles for individual inputBox items within the formBox on smaller screens */
+    .contact .contactForm .formBox .inputBox {
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+
+    /* Styles for specific inputBox items with 50% width on smaller screens */
+    .contact .contactForm .formBox .inputBox.w50 {
+        width: 100%; /* Set width to 100% */
+    }
+
+    /* Styles for specific inputBox items with 100% width on smaller screens */
+    .contact .contactForm .formBox .inputBox.w100 {
+        width: 100%; /* Set width to 100% */
+    }
+
+    /* Styles for input and textarea labels within the inputBox on smaller screens */
+    .contact .contactForm .formBox .inputBox input,
+    .contact .contactForm .formBox .inputBox textarea {
+        font-size: 16px; /* Set font size to 16 pixels */
+    }
+
+    /* Styles for the submit button within the inputBox on smaller screens */
+    .contact .contactForm .formBox .inputBox input[type="submit"] {
+        max-width: 100%; /* Set maximum width to 100% */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Feedback*/
+
+/* Styles for the container element */
+.container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    max-width: 600px; /* Set maximum width to 600 pixels */
+    margin: 0 auto; /* Center the container by setting left and right margins to auto */
+  }
+  
+  /* Styles for the feedback element */
+  #feedback {
+    background-color: #164863; /* Set background color to a specific shade of blue */
+    color: #ffffff; /* Set text color to white */
+    padding: 30px; /* Add padding of 30 pixels */
+    border-radius: 20px; /* Add rounded corners */
+    text-align: center; /* Center text within the element */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  }
+  
+  /* Styles for the radiobtn class */
+  .radiobtn {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 10px 0; /* Add margin of 10 pixels above and below the element */
+  }
+  
+  /* Styles for the #review element */
+#review {
+    width: 100%; /* Set width to 100% */
+    padding: 10px; /* Add padding of 10 pixels */
+    border: 1px solid #ccc; /* Add a 1-pixel solid border with a specific shade of gray */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  /* Styles for the #first-name, #last-name, and #email elements */
+  #first-name,
+  #last-name,
+  #email {
+    width: 100%; /* Set width to 100% */
+    padding: 10px; /* Add padding of 10 pixels */
+    margin: 5px 0; /* Add margin of 5 pixels above and below the element */
+    border: 1px solid #ccc; /* Add a 1-pixel solid border with a specific shade of gray */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  /* Styles for the button with type "submit" */
+  button[type="submit"] {
+    background-color: #3498db; /* Set background color to a specific shade of blue */
+    color: #ffffff; /* Set text color to white */
+    padding: 10px 20px; /* Add padding of 10 pixels on the top and bottom, 20 pixels on the left and right */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Set cursor to pointer on hover for interaction */
+  }
+  
+  /* Styles for the button with type "submit" on hover */
+  button[type="submit"]:hover {
+    background-color: #297dbf; /* Change background color on hover to a slightly darker shade of blue */
+  }
+  
+  /* Styles for elements with the class "rating" */
+  .rating {
+    display: inline-block; /* Display the element as an inline block */
+  }
+  
+  /* Styles for input elements within elements with the class "rating" */
+  .rating input {
+    display: none; /* Hide the input elements */
+  }
+  
+/* Styles for labels within the "rating" class */
+.rating label {
+  font-size: 30px; /* Set font size to 30 pixels */
+  color: #ccc; /* Set text color to a specific shade of gray */
+  cursor: pointer; /* Set cursor to pointer for interaction */
+}
+
+/* Styles for the pseudo-elements ":before" of labels within the "rating" class */
+.rating label:before {
+  content: '\2605'; /* Add a star character as content before each label */
+}
+
+/* Styles for checked input elements followed by a label within the "rating" class */
+.rating input:checked ~ label {
+  color: #ffca08; /* Set text color to a specific shade of yellow for checked labels */
+}
+
+/* Styles for labels within the "rating" class on hover, followed by another label */
+.rating label:hover ~ label {
+  color: #ffca08; /* Set text color to a specific shade of yellow on hover for adjacent labels */
+}
+
+/* Styles for the footer section */
+.footer {
+  background: #427D9D; /* Set background color to a specific shade of blue */
+}
+
+/* Styles for the box-container within the footer section */
+footer .box-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if there's not enough space */
+}
+
+/* Styles for individual boxes within the box-container in the footer section */
+footer .box-container .box {
+  margin: 2rem; /* Add margin of 2rem around each box */
+  flex: 1 1 30rem; /* Set flex properties for flexibility and sizing */
+}
+/* Styles for the h3 element within .box in the footer */
+.footer .box-container .box h3 {
+    font-size: 2.5rem; /* Set font size to 2.5rem */
+    color: #fff; /* Set text color to white */
+  }
+  
+  /* Styles for the p element within .box in the footer */
+  .footer .box-container .box p {
+    font-size: 1.4rem; /* Set font size to 1.4rem */
+    color: #eee; /* Set text color to a specific shade of gray */
+    padding: 1rem 0; /* Add padding of 1rem on the top and bottom */
+  }
+  
+  /* Styles for links (a) within .box in the footer */
+  .footer .box-container .box a {
+    font-size: 1.8rem; /* Set font size to 1.8rem */
+    color: #eee; /* Set text color to a specific shade of gray */
+    padding: 0.4rem 0; /* Add padding of 0.4rem on the top and bottom */
+    display: block; /* Display as a block element to occupy full width */
+  }
+  
+  /* Styles for links (a) within .box in the footer on hover */
+  .footer .box-container .box a:hover {
+    text-decoration: underline; /* Underline the link on hover */
+  }
+  
+  /* Styles for the second .box in the footer */
+  .footer .box-container .box:nth-child(2) {
+    text-align: center; /* Center the text within the second box */
+  }
+  
+  /* Styles for the form within .box-container in the footer */
+  .footer .box-container form {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+  }
+  
+  /* Styles for input[type="email"] within the form in the footer */
+  .footer .box-container form input[type="email"] {
+    height: 4.1rem; /* Set height to 4.1rem */
+    width: 100%; /* Set width to 100% */
+    font-size: 1.7rem; /* Set font size to 1.7rem */
+    padding: 0 1rem; /* Add padding of 0 on the left and right, 1rem on the top and bottom */
+  }
+  
+  /* Styles for the .btn class within the form in the footer */
+  .footer .box-container form .btn {
+    margin-top: 0; /* Set margin-top to 0 */
+  }
+  
+  /* Styles for the .btn class within the form in the footer on hover */
+  .footer .box-container form .btn:hover {
+    color: #405c72; /* Set text color on hover to a specific shade of blue */
+    background: #ccc; /* Set background color on hover to a specific shade of gray */
+  }
+  
+  /* Styles for the .credit class in the footer */
+  .footer .credit {
+    font-size: 2rem; /* Set font size to 2rem */
+    background: #222; /* Set background color to a specific shade of dark gray */
+    text-align: center; /* Center the text */
+    color: #fff; /* Set text color to white */
+    padding: 2rem 1rem; /* Add padding of 2rem on the top and bottom, 1rem on the left and right */
+    font-weight: normal; /* Set font weight to normal */
+  }
+  
+  /* Styles for links (a) within the .credit class in the footer */
+  .footer .credit a {
+    color: var(--orange); /* Set text color to a variable named "--orange" */
+  }
+  
+/* Media query for screens with a maximum width of 768 pixels */
+@media (max-width: 768px) {
+
+    /* Adjustments for the feedback form */
+  
+    /* Increase padding for the #feedback element */
+    #feedback {
+      padding: 20px;
+    }
+  
+    /* Adjust padding for the #first-name, #last-name, and #email elements */
+    #first-name,
+    #last-name,
+    #email {
+      padding: 8px;
+    }
+  
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Review page */
+.review{
+
+        font-family: "Roboto", sans-serif;
+}
+.views {
+    /* Position the background image at the bottom center */
+    background-position: bottom center;
+    /* Prevent the background image from repeating */
+    background-repeat: no-repeat;
+    /* Make the background image cover the entire container */
+    background-size: cover;
+    /* Set a minimum height of 100% of the viewport height */
+    min-height: 100vh;
+    /* Use flex display for the main content */
+    display: flex;
+  }
+  
+  /* Set maximum width for the container and center it on the page */
+  .reviewpage{
+    max-width: 1200px;
+    /* Center the container horizontally on the page */
+    margin: 150px;
+    /* Add padding to the container */
+    padding: 1rem;
+    /* Use grid layout for the container */
+    display: grid;
+    /* Define two equal columns in the grid */
+    grid-template-columns: repeat(2, 1fr);
+    /* Set the gap between grid items */
+    gap: 10rem;
+  }
+  
+  /* Style for the heading inside the left side of the container */
+  .reviewpage__left h1 {
+    /* Add margin below the heading */
+    margin-bottom: 2rem;
+    /* Set font size and weight for the heading */
+    font-size: 30px;
+    font-weight: 500;
+    /* Use custom primary color for text color */
+    color:#164863;
+  }
+  
+  /* Style for paragraphs inside the left side of the container */
+  .reviewpage__left p {
+    /* Use custom text color for paragraphs */
+    color: var(--text-dark);
+    /* Add margin below the paragraph */
+    margin-bottom: 1rem;
+    /* Set font size for the paragraph */
+    font-size: 20px;
+  }
+  
+  /* Styles for buttons within the left side of the container */
+  .reviewpage__left button {
+    /* Add padding to the button */
+    padding: 2rem 4rem;
+    /* Add margin above the button */
+    margin-top: 3rem;
+    margin-left: 12rem;
+    /* Remove default outline and border from the button */
+    outline: none;
+    border: none;
+    /* Add border radius to the button */
+    border-radius: 5px;
+    /* Create a linear gradient background */
+    background: linear-gradient(
+      to right,
+      #164863,
+      #DDF2FD
+    );
+    /* Set text color to white */
+    color: var(--white);
+    /* Set font size for the button text */
+    font-size: 15px;
+    /* Change cursor style to indicate interactivity */
+    cursor: pointer;
+    
+  }
+  
+  /* Styles for the right side of the container */
+  .reviewpage__right {
+    /* Use a grid layout for the right side */
+    display: grid;
+    /* Set the gap between grid items */
+    gap: 2rem;
+  }
+  
+  /* Styles for cards within the right side of the container */
+  .card {
+    /* Add padding to the card */
+    padding: 2rem;
+    /* Display card contents in a flex container */
+    display: flex;
+    /* Align items to the start of the cross axis */
+    align-items: flex-start;
+    /* Set the gap between flex items */
+    gap: 2rem;
+    /* Set background color for the card */
+    background-color: var(--white);
+    /* Add border radius to create rounded corners */
+    border-radius: 1rem;
+    /* Apply box shadow for a subtle elevation effect */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    /* Change cursor style to indicate interactivity */
+    cursor: pointer;
+  }
+  
+  /* Styling for the profile image within cards */
+  .card img {
+    /* Set the maximum width of the profile image */
+    max-width: 75px;
+    /* Apply a circular border radius to the image */
+    border-radius: 100%;
+  }
+  
+  /* Styling for the content section within cards */
+  .card__content {
+    /* Display card content as a flex container */
+    display: flex;
+    /* Set the gap between flex items */
+    gap: 1rem;
+  }
+  
+  /* Styling for icons within the card content section */
+  .card__content span i {
+    /* Set font size for icons */
+    font-size: 2rem;
+    /* Use custom primary color for icon color */
+    color: #164863;
+  }
+  
+  /* Styling for details paragraphs within cards */
+  .card__details p {
+    /* Apply italic font style to the paragraphs */
+    font-style: italic;
+    /* Use custom text color for paragraphs */
+    color: #164863;
+    /* Add margin below the paragraphs */
+    margin-bottom: 1rem;
+    /* Set font size for the paragraphs */
+    font-size: 15px;
+  }
+  
+  /* Styling for headings within details in cards */
+  .card__details h4 {
+    /* Align text to the right */
+    text-align: right;
+    /* Use custom primary color for heading text color */
+    color: #164863;
+    /* Set font size for the headings */
+    font-size: 15px;
+    /* Apply medium font weight to the headings */
+    font-weight: 500;
+  }
+  
+  /* Media query for screens with width less than 1200px */
+  @media (max-width: 1200px) {
+    /* Adjust gap for the container */
+    .reviewpage {
+      gap: 3rem;
+    }
+  }
+  
+  /* Media query for screens with width less than 900px */
+  @media (max-width: 900px) {
+    /* Adjust grid template columns for the container */
+    .reviewpage {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    /* Adjust grid template columns for the right side of the container */
+    .reviewpage__right {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Media query for screens with width less than 750px */
+  @media (max-width: 750px) {
+    /* Adjust margin for the left side of the container */
+  .reviewpage__left {
+      margin-top: 110px;
+    }
+    /* Adjust grid template columns for the right side of the container */
+    .reviewpage__right {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the ABOUT US section */
+
+/* Wrapper for the about section */
+.about-wrapper {
+    height: 100vh; /* Set height to 100% of the viewport height */
+}
+
+/* Left section of the about page */
+.about-left {
+    background: #164863; /* Set background color to a specific shade of blue */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Set height to 100% of the viewport height */
+}
+
+/* Content within the left section */
+.about-left-content > div {
+    background: #9BBEC8; /* Set background color to a specific shade of gray-blue */
+    padding: 12rem 12rem 6rem 6rem; /* Add padding to the content */
+    text-align: center; /* Center text within the content */
+}
+
+/* Container for the left content with box shadow */
+.about-left-content {
+    box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39); /* Add box shadow for depth */
+    -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39); /* Vendor-prefixed box shadow */
+    -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39); /* Vendor-prefixed box shadow */
+}
+
+/* Image container within the about section */
+.about-img img {
+    display: block; /* Display the image as a block element */
+    width: 250px; /* Set width of the image */
+}
+
+/* Container for the circular image */
+.about-img {
+    width: 250px; /* Set width of the container */
+    height: 250px; /* Set height of the container */
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 50%; /* Create a circular border */
+    transition: all 0.5s ease-in-out; /* Add transition for smooth effects */
+}
+
+/* Shadow container for the circular image */
+.shadow {
+    margin-left: auto; /* Set margin-left to auto for centering */
+    margin-right: auto; /* Set margin-right to auto for centering */
+    border-radius: 50%; /* Create a circular border */
+    width: 200px; /* Set width of the shadow container */
+    height: 200px; /* Set height of the shadow container */
+    position: relative; /* Set position to relative for positioning */
+    cursor: pointer; /* Set cursor to pointer for interaction */
+}
+/* Pseudo-element for shadow effect beneath the circular image */
+.shadow::after {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Position absolutely within the .shadow container */
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+    left: 50%; /* Set left position to center */
+    transform: translateX(-50%); /* Adjust horizontal position to center */
+    bottom: -20px; /* Position below the circular image */
+    height: 7px; /* Set height for the shadow */
+    width: 50px; /* Set width for the shadow */
+    filter: blur(3px); /* Apply blur effect to the shadow */
+    -webkit-filter: blur(3px); /* Vendor-prefixed blur for compatibility */
+    opacity: 0; /* Initial opacity set to 0 */
+    transition: all 0.6s ease; /* Add transition for smooth effect */
+}
+
+/* Hover effect for the .shadow container */
+.shadow:hover .about-img {
+    transform: translateY(-10px); /* Move the circular image upward on hover */
+}
+
+/* Hover effect for the shadow pseudo-element */
+.shadow:hover::after {
+    opacity: 1; /* Increase opacity on hover */
+}
+
+/* Styles for the h2 element within .about-left-content */
+.about-left-content h2 {
+    font-size: 2rem; /* Set font size to 2rem */
+    margin: 8rem 0.2rem 1rem 5rem; /* Set margins for positioning */
+    line-height: 1.2; /* Set line height for better readability */
+    padding-bottom: 3rem; /* Add padding at the bottom */
+    border-bottom: 2px solid #edffec; /* Add border at the bottom with a specific shade of green */
+}
+
+/* Styles for the h3 element within .about-left-content */
+.about-left-content h3 {
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: 300; /* Set font weight to 300 */
+    letter-spacing: 5px; /* Add letter spacing for emphasis */
+    margin: 3rem 0.2rem 1rem 5rem; /* Set margins for positioning */
+}
+
+/* Styles for the icons container */
+.icons {
+    background: #fff; /* Set background color to white */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    padding: 1rem 0; /* Add padding at the top and bottom */
+}
+
+/* Styles for individual icons within the icons container */
+.icons li {
+    list-style-type: none; /* Remove list styling */
+    background: #164863; /* Set background color to a specific shade of blue */
+    color: #fff; /* Set text color to white */
+    width: 50px; /* Set width of each icon */
+    height: 50px; /* Set height of each icon */
+    margin: 0 1rem; /* Add margin between icons */
+    border-radius: 50%; /* Create a circular border for icons */
+    display: flex; /* Use flexbox for layout within each icon */
+    justify-content: center; /* Center content horizontally within each icon */
+    align-items: center; /* Center content vertically within each icon */
+    font-size: 1.2rem; /* Set font size to 1.2rem */
+    cursor: pointer; /* Set cursor to pointer for interaction */
+    transition: all 0.5s ease-in-out; /* Add transition for smooth effects */
+}
+
+/* Hover effect for individual icons */
+.icons li:hover {
+    background: #edffec; /* Change background color on hover to a specific shade of green */
+    color: #000; /* Change text color on hover to black */
+}
+
+/* Styles for the right section of the ABOUT US page */
+
+/* Container for the right section */
+.about-right {
+    background: #fff; /* Set background color to white */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 0 5rem; /* Add padding on the left and right */
+    text-align: center; /* Center text within the container */
+}
+
+/* Styles for the h1 element within .about-right */
+.about-right h1 {
+    font-size: 7rem; /* Set font size to 7rem */
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+/* Styles for the span element within h1 in .about-right */
+.about-right h1 span {
+    color: #164863; /* Set text color to a specific shade of blue */
+}
+
+/* Styles for the h2 element within .about-right */
+.about-right h2 {
+    font-weight: 600; /* Set font weight to 600 */
+}
+
+/* Styles for the container of buttons */
+.about-btns {
+    display: flex; /* Use flexbox for layout */
+    margin: 2rem 0; /* Add margin at the top and bottom */
+}
+
+/* Styles for buttons with the .btn class */
+.btn {
+    border: none; /* Remove border */
+    font-size: 1.5rem; /* Set font size to 1.5rem */
+    text-transform: uppercase; /* Convert text to uppercase */
+    border: 2px solid #000; /* Set border to 2px solid black */
+    border-radius: 20px; /* Set border-radius for rounded corners */
+    padding: 1rem 0; /* Add padding on the top and bottom */
+    width: 200px; /* Set width to 200px */
+    font-weight: bold; /* Set font weight to bold */
+    background: transparent; /* Set background to transparent */
+    margin: 0 1rem; /* Add margin between buttons */
+    cursor: pointer; /* Set cursor to pointer for interaction */
+}
+
+/* Styles for buttons with .btn-pink class */
+.btn.btn-pink {
+    background: #164863; /* Set background color to a specific shade of blue */
+    color: #DDF2FD; /* Set text color to a specific shade of light blue */
+    border-color: #164863; /* Set border color to the same shade of blue */
+    transition: all 0.5s ease-in-out; /* Add transition for smooth effects */
+}
+
+/* Hover effect for buttons with .btn-pink class */
+.btn.btn-pink:hover {
+    background: transparent; /* Change background to transparent on hover */
+    border-color: #164863; /* Change border color on hover to the same shade of blue */
+    color: #000; /* Change text color on hover to black */
+}
+
+/* Styles for buttons with .btn-white class */
+.btn.btn-white {
+    transition: all 0.5s ease-in-out; /* Add transition for smooth effects */
+    color: #000; /* Set text color to black */
+}
+
+/* Hover effect for buttons with .btn-white class */
+.btn.btn-white:hover {
+    background: #164863; /* Change background color on hover to the same shade of blue */
+    border-color: #164863; /* Change border color on hover to the same shade of blue */
+    color: #DDF2FD; /* Change text color on hover to a specific shade of light blue */
+}
+
+/* Styles for the paragraph element within .about-para */
+.about-para p {
+    font-weight: 300; /* Set font weight to 300 */
+    padding: 0.5rem; /* Add padding of 0.5rem */
+    opacity: 0.8; /* Set opacity to 0.8 for a semi-transparent effect */
+}
+
+/* Media query for screens with a minimum width of 992 pixels */
+@media screen and (min-width: 992px) {
+
+    /* Adjust layout for the ABOUT US section */
+
+    /* Use CSS grid for the about section wrapper */
+    .about-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Use two equal columns in the grid */
+    }
+
+    /* Positioning adjustments for the left section of the about page */
+    .about-left {
+        position: relative; /* Set position to relative */
+    }
+
+    /* Positioning adjustments for the content within the left section */
+    .about-left-content {
+        position: absolute; /* Set position to absolute */
+        right: -50px; /* Shift content to the right by 50 pixels */
+    }
+}
+
+
+
+
+
+
+
+/*Product Page*/
+/* Styles for the main wrapper containing the products section */
+.main-wrapper {
+    min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+    background-color: #9BBEC8; /* Set background color */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 120px; /* Add top margin of 120px */
+}
+
+/* Styles for the container within the main wrapper */
+.container {
+    max-width: 1200px; /* Set maximum width to 1200px */
+    padding: 0 1rem; /* Add padding on the left and right */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Styles for the product div container */
+.product-div {
+    margin: 1rem 0; /* Add margin on top and bottom */
+    padding: 2rem 0; /* Add padding on top and bottom */
+    display: grid; /* Use CSS grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* Use two equal columns in the grid */
+    background: linear-gradient(to right, #9BBEC8, #E6EEF5); /* Apply linear gradient background */
+    border-radius: 10px; /* Set border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* Styles for the left part of the product div */
+.product-div-left {
+    padding: 20px; /* Add padding */
+}
+
+/* Styles for the right part of the product div */
+.product-div-right {
+    padding: 20px; /* Add padding */
+}
+
+/* Styles for the image container within the product div */
+.img-container img {
+    width: 500px; /* Set width of the image */
+    margin: 70px auto; /* Center the image with top margin */
+}
+
+/* Styles for the hover container */
+.hover-container div {
+    border: 2px solid #164863; /* Set border color */
+    padding: 1rem; /* Add padding */
+    border-radius: 3px; /* Set border radius for rounded corners */
+    margin: 0 4px 8px 4px; /* Add margins */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Styles for the active state in the hover container */
+.active {
+    border-color: #164863!important; /* Set border color for the active state */
+}
+
+/* Styles for hover effect in the hover container */
+.hover-container div:hover {
+    border-color: #164863; /* Change border color on hover */
+}
+
+/* Styles for the images within the hover container */
+.hover-container div img {
+    width: 50px; /* Set width of the image */
+    cursor: pointer; /* Set cursor to pointer for interaction */
+}
+
+/* Styles for the right part of the product div */
+.product-div-right span {
+    display: block; /* Display as block element */
+}
+
+/* Styles for the product name */
+.product-name {
+    font-size: 26px; /* Set font size */
+    margin-bottom: 22px; /* Add bottom margin */
+    font-weight: 700; /* Set font weight */
+    letter-spacing: 1px; /* Add letter spacing */
+    opacity: 0.9; /* Set opacity */
+}
+
+/* Styles for the product price */
+.product-price {
+    font-weight: 700; /* Set font weight */
+    font-size: 24px; /* Set font size */
+    opacity: 0.9; /* Set opacity */
+    font-weight: 500; /* Set font weight */
+}
+
+/* Styles for the product rating */
+.product-rating {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-top: 12px; /* Add top margin */
+}
+
+/* Styles for individual spans within the product rating */
+.product-rating span {
+    margin-right: 6px; /* Add right margin */
+}
+
+/* Styles for the product description */
+.product-description {
+    font-size: 18px; /* Set font size */
+    line-height: 1.6; /* Set line height */
+    font-weight: 300; /* Set font weight */
+    opacity: 0.9; /* Set opacity */
+    margin-top: 22px; /* Add top margin */
+}
+
+/* Styles for the button groups */
+.btn-groups {
+    margin-top: 22px; /* Add top margin */
+}
+
+/* Styles for buttons within the button group */
+.btn-groups button {
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Set font size */
+    font-family: inherit; /* Use the font family of the parent */
+    text-transform: uppercase; /* Convert text to uppercase */
+    padding: 15px 16px; /* Add padding */
+    cursor: pointer; /* Set cursor to pointer */
+    transition: all 0.3s ease; /* Add transition effect for all properties */
+}
+
+/* Styles for icons within the button group */
+.btn-groups button .fas {
+    margin-right: 8px; /* Add right margin to the icon */
+}
+
+/* Styles for the "Add to Cart" button */
+.add-cart-btn {
+    background-color: #164863; /* Set background color */
+    border: 2px solid #164863; /* Set border color */
+    color: #fff; /* Set text color */
+    margin-right: 8px; /* Add right margin */
+}
+
+/* Hover styles for the "Add to Cart" button */
+.add-cart-btn:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #164863; /* Change text color on hover */
+}
+
+/* Styles for the "Buy Now" button */
+.buy-now-btn {
+    background-color: white; /* Set background color */
+    border: 2px solid white; /* Set border color */
+    color: black; /* Set text color */
+}
+
+/* Hover styles for the "Buy Now" button */
+.buy-now-btn:hover {
+    background-color: #164863; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Media query for screens with a maximum width of 992 pixels */
+@media screen and (max-width: 992px) {
+    /* Adjust layout for smaller screens */
+
+    /* Change grid columns to a single column for the product div */
+    .product-div {
+        grid-template-columns: 100%; /* Use a single column in the grid */
+    }
+
+    /* Center text in the right part of the product div */
+    .product-div-right {
+        text-align: center; /* Center-align text */
+    }
+
+    /* Center the product rating in smaller screens */
+    .product-rating {
+        justify-content: center; /* Center-align items */
+    }
+
+    /* Limit the maximum width of the product description */
+    .product-description {
+        max-width: 400px; /* Set maximum width */
+        margin-right: auto; /* Align to the right */
+        margin-left: auto; /* Align to the left */
+    }
+}
+
+/* Media query for screens with a maximum width of 400 pixels */
+@media screen and (max-width: 400px) {
+    /* Adjust styles for even smaller screens */
+
+    /* Set the width of buttons to 100% and add bottom margin */
+    .btn-groups button {
+        width: 100%; /* Set width to 100% */
+        margin-bottom: 10px; /* Add bottom margin */
+    }
+}
